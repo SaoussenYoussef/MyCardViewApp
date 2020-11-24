@@ -59,9 +59,10 @@ public class ScrollingActivity extends AppCompatActivity {
 
         // Itme decoration
 
-        recyclerView.addItemDecoration(new GridItemSpacingDecoration(2, dpToPx(10), true));
+
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new GridItemSpacingDecoration(2, dpToPx(10), true));
 
         // preparing the cards
         InserDataIntoCards();
@@ -161,7 +162,7 @@ public class ScrollingActivity extends AppCompatActivity {
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view,
                                    @NonNull RecyclerView parent,
                                    @NonNull RecyclerView.State state) {
-            super.getItemOffsets(outRect, view, parent, state);
+           // super.getItemOffsets(outRect, view, parent, state);
 
             int position = parent.getChildAdapterPosition(view);
             int column = position % spanCount;
